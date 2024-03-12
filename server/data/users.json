@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "fullName": "Slamet Riyadi",
+    "email": "slamet@example.com",
+    "password": "password123",
+    "role": "Admin",
+    "phoneNumber": "+6281234567890",
+    "address": "Jl. Merdeka No. 17, Jakarta Pusat"
+  },
+  {
+    "id": 2,
+    "fullName": "Mega Purnamasari",
+    "email": "mega@example.com",
+    "password": "rahasia456",
+    "role": "Admin",
+    "phoneNumber": "+6289876543210",
+    "address": "Jl. Anggrek No. 12, Bandung"
+  },
+  {
+    "id": 3,
+    "fullName": "Budi Santoso",
+    "email": "budi@example.com",
+    "password": "sangataman789",
+    "role": "Admin",
+    "phoneNumber": "+6281122334455",
+    "address": "Jl. Kenanga No. 5, Surabaya"
+  },
+  {
+    "id": 4,
+    "fullName": "Ani Cahyani",
+    "email": "ani@example.com",
+    "password": "rahasia123",
+    "role": "Admin",
+    "phoneNumber": "+623344556677",
+    "address": "Jl. Mawar No. 10, Yogyakarta"
+  },
+  {
+    "id": 5,
+    "fullName": "Antonius Setiawan",
+    "email": "anton@example.com",
+    "password": "salam321",
+    "role": "Admin",
+    "phoneNumber": "+625566778899",
+    "address": "Jl. Melati No. 23, Semarang"
+  }
+]
