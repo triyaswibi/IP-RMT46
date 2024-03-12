@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "typeCar": "Toyota"
+  },
+  {
+    "id": 2,
+    "typeCar": "Mitsubishi"
+  },
+  {
+    "id": 3,
+    "typeCar": "Honda"
+  },
+  {
+    "id": 4,
+    "typeCar": "Hyundai"
+  },
+  {
+    "id": 5,
+    "typeCar": "Kia"
+  },
+  {
+    "id": 6,
+    "typeCar": "Chevrolet"
+  },
+  {
+    "id": 7,
+    "typeCar": "Ford"
+  },
+  {
+    "id": 8,
+    "typeCar": "Audi"
+  },
+  {
+    "id": 9,
+    "typeCar": "Mercedes Benz"
+  },
+  {
+    "id": 10,
+    "typeCar": "BMW"
+  },
+  {
+    "id": 11,
+    "typeCar": "Suzuki"
+  },
+  {
+    "id": 12,
+    "typeCar": "Daihatsu"
+  }
+]
