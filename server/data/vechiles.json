@@ -169,5 +169,14 @@
     "price": 300000000,
     "typeId": 2,
     "authorId": 3
+  },
+  {
+    "id": 20,
+    "name": "Hyundai Tucson",
+    "description": "SUV modern dengan kenyamanan premium dan fitur-fitur canggih.",
+    "imgUrl": "https://example.com/hyundai_tucson.jpg",
+    "price": 370000000,
+    "typeId": 3,
+    "authorId": 4
   }
 ]
