@@ -49,7 +49,7 @@ module.exports = class vechileController {
     static async updateVechileById(req, res, next) {
         const { id } = req.params
         try {
-            const findVechile = await Job.findByPk(+id)
+            const findVechile = await Vechile.findByPk(+id)
             if(!findVechile) throw {name: "NotFound"}
 
             await findVechile.update(req.body)
@@ -62,7 +62,7 @@ module.exports = class vechileController {
     static async deactiveVechileById(req, res, next) {
         const { id } = req.params
         try {
-            const findVechile = await Job.findByPk(+id)
+            const findVechile = await Vechile.findByPk(+id)
             if(!findVechile)  throw {name: "NotFound"}
 
             await findVechile.destroy()

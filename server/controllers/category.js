@@ -1,6 +1,6 @@
 const { Category } = require('../models');
 
-module.exports = class companyController {
+module.exports = class categoryController {
     static async getCategory(req, res, next) {
         try {
             const showCategory = await Category.findAll();
