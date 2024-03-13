@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   class Vechile extends Model {
     static associate(models) {
       Vechile.belongsTo(models.User, {foreignKey: 'authorId'})
-      Vechile.belongsTo(models.Type, {foreignKey: 'typeId'})
+      Vechile.belongsTo(models.Category, {foreignKey: 'categoryId'})
     }
   }
   Vechile.init({
@@ -58,11 +58,11 @@ module.exports = (sequelize, DataTypes) => {
         },
       }
     },
-    typeId: {
+    categoryId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'Type',
+        model: 'categoryId',
         key: 'id',
       }
     },

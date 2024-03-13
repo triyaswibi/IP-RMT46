@@ -1,59 +1,59 @@
 [
   {
     "id": 1,
-    "typeCar": "Toyota"
+    "category": "Toyota"
   },
   {
     "id": 2,
-    "typeCar": "Mitsubishi"
+    "category": "Mitsubishi"
   },
   {
     "id": 3,
-    "typeCar": "Honda"
+    "category": "Honda"
   },
   {
     "id": 4,
-    "typeCar": "Hyundai"
+    "category": "Hyundai"
   },
   {
     "id": 5,
-    "typeCar": "Kia"
+    "category": "Kia"
   },
   {
     "id": 6,
-    "typeCar": "Chevrolet"
+    "category": "Chevrolet"
   },
   {
     "id": 7,
-    "typeCar": "Ford"
+    "category": "Ford"
   },
   {
     "id": 8,
-    "typeCar": "Audi"
+    "category": "Audi"
   },
   {
     "id": 9,
-    "typeCar": "Mercedes Benz"
+    "category": "Mercedes Benz"
   },
   {
     "id": 10,
-    "typeCar": "BMW"
+    "category": "BMW"
   },
   {
     "id": 11,
-    "typeCar": "Suzuki"
+    "category": "Suzuki"
   },
   {
     "id": 12,
-    "typeCar": "Daihatsu"
+    "category": "Daihatsu"
   },
   {
     "id": 13,
-    "typeCar": "Nissan"
+    "category": "Nissan"
   },
   {
     "id": 14,
-    "typeCar": "Mazda"
+    "category": "Mazda"
   }
   
 ]

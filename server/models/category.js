@@ -3,27 +3,27 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Type extends Model {
+  class Category extends Model {
     static associate(models) {
-      Type.hasMany(models.Vehicle, {foreignKey: 'typeId'} )
+      Category.hasMany(models.Vechile, {foreignKey: 'categoryId'})
     }
   }
-  Type.init({
-    typeCar: {
+  Category.init({
+    category: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         notEmpty: {
-          msg: "typeCar is required"
+          msg: "Category is required"
         },
         notNull: {
-          msg: "typeCar is required"
+          msg: "Category is required"
         },
       }
     }
   }, {
     sequelize,
-    modelName: 'Type',
+    modelName: 'Category',
   });
-  return Type;
+  return Category;
 };

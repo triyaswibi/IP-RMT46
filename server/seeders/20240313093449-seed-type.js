@@ -9,11 +9,11 @@ module.exports = {
       return el
      })
   
-     await queryInterface.bulkInsert('Types', vechile)
+     await queryInterface.bulkInsert('Categories', vechile)
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('Types', null, {
+    await queryInterface.bulkDelete('Categories', null, {
       truncate: true,
       restartIdentity: true,
       cascade: true

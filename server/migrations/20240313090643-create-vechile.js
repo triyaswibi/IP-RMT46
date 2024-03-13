@@ -21,11 +21,11 @@ module.exports = {
       price: {
         type: Sequelize.INTEGER
       },
-      typeId: {
+      categoryId: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
-          model: "Types",
+          model: "Categories",
           key: "id"
         }
       },
