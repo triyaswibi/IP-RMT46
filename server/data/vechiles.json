@@ -14,7 +14,7 @@
     "description": "Sedan sporty dengan teknologi canggih dan efisiensi bahan bakar yang baik.",
     "imgUrl": "https://example.com/honda_civic.jpg",
     "price": 270000000,
-    "typeId": 1,
+    "typeId": 3,
     "authorId": 2
   },
   {
@@ -23,7 +23,7 @@
     "description": "SUV kompak yang tangguh dengan kenyamanan dan fitur keamanan yang lengkap.",
     "imgUrl": "https://example.com/nissan_xtrail.jpg",
     "price": 350000000,
-    "typeId": 2,
+    "typeId": 13,
     "authorId": 3
   },
   {
@@ -32,7 +32,7 @@
     "description": "SUV yang kokoh dan kuat, cocok untuk petualangan di jalanan dan medan off-road.",
     "imgUrl": "https://example.com/toyota_fortuner.jpg",
     "price": 400000000,
-    "typeId": 2,
+    "typeId": 1,
     "authorId": 4
   },
   {
@@ -50,7 +50,7 @@
     "description": "MPV mewah dengan desain interior yang elegan dan fitur kenyamanan premium.",
     "imgUrl": "https://example.com/toyota_alphard.jpg",
     "price": 600000000,
-    "typeId": 3,
+    "typeId": 1,
     "authorId": 1
   },
   {
@@ -68,7 +68,7 @@
     "description": "SUV kompak dengan desain yang stylish dan harga yang terjangkau.",
     "imgUrl": "https://example.com/daihatsu_terios.jpg",
     "price": 250000000,
-    "typeId": 2,
+    "typeId": 12,
     "authorId": 3
   },
   {
@@ -77,7 +77,7 @@
     "description": "MPV kompak dengan performa yang handal dan ruang kabin yang luas.",
     "imgUrl": "https://example.com/toyota_avanza.jpg",
     "price": 200000000,
-    "typeId": 3,
+    "typeId": 1,
     "authorId": 4
   },
   {
@@ -86,7 +86,7 @@
     "description": "MPV hemat bahan bakar dengan desain yang modern dan fitur yang lengkap.",
     "imgUrl": "https://example.com/suzuki_ertiga.jpg",
     "price": 220000000,
-    "typeId": 3,
+    "typeId": 11,
     "authorId": 5
   },
   {
@@ -95,7 +95,7 @@
     "description": "Sedan mewah dengan performa tinggi dan desain yang elegan.",
     "imgUrl": "https://example.com/bmw_3_series.jpg",
     "price": 600000000,
-    "typeId": 1,
+    "typeId": 10,
     "authorId": 1
   },
   {
@@ -104,7 +104,7 @@
     "description": "Sedan premium dengan teknologi terkini dan kenyamanan yang luar biasa.",
     "imgUrl": "https://example.com/mercedes_c_class.jpg",
     "price": 700000000,
-    "typeId": 1,
+    "typeId": 9,
     "authorId": 2
   },
   {
@@ -113,7 +113,7 @@
     "description": "SUV mewah dengan performa yang impresif dan fitur-fitur canggih.",
     "imgUrl": "https://example.com/audi_q5.jpg",
     "price": 800000000,
-    "typeId": 2,
+    "typeId": 8,
     "authorId": 3
   },
   {
@@ -122,7 +122,7 @@
     "description": "SUV serbaguna dengan kinerja tangguh dan ruang kargo yang luas.",
     "imgUrl": "https://example.com/honda_cr-v.jpg",
     "price": 350000000,
-    "typeId": 4,
+    "typeId": 3,
     "authorId": 5
   },
   {
@@ -140,7 +140,7 @@
     "description": "SUV elegan dengan desain modern, kinerja dinamis, dan kenyamanan premium.",
     "imgUrl": "https://example.com/mazda_cx-5.jpg",
     "price": 380000000,
-    "typeId": 4,
+    "typeId": 14,
     "authorId": 5
   },
   {
@@ -149,7 +149,7 @@
     "description": "SUV kokoh dengan kapasitas tempat duduk yang luas dan kemampuan off-road yang handal.",
     "imgUrl": "https://example.com/ford_everest.jpg",
     "price": 450000000,
-    "typeId": 5,
+    "typeId": 7,
     "authorId": 1
   },
   {
@@ -158,7 +158,7 @@
     "description": "SUV premium dengan desain yang elegan dan fitur-fitur canggih.",
     "imgUrl": "https://example.com/chevrolet_captiva.jpg",
     "price": 420000000,
-    "typeId": 1,
+    "typeId": 6,
     "authorId": 2
   },
   {
@@ -167,7 +167,7 @@
     "description": "SUV kompak dengan gaya yang sporty dan performa yang efisien.",
     "imgUrl": "https://example.com/kia_seltos.jpg",
     "price": 300000000,
-    "typeId": 2,
+    "typeId": 5,
     "authorId": 3
   },
   {
@@ -176,7 +176,7 @@
     "description": "SUV modern dengan kenyamanan premium dan fitur-fitur canggih.",
     "imgUrl": "https://example.com/hyundai_tucson.jpg",
     "price": 370000000,
-    "typeId": 3,
+    "typeId": 4,
     "authorId": 4
   }
 ]

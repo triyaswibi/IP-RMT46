@@ -46,5 +46,14 @@
   {
     "id": 12,
     "typeCar": "Daihatsu"
+  },
+  {
+    "id": 13,
+    "typeCar": "Nissan"
+  },
+  {
+    "id": 14,
+    "typeCar": "Mazda"
   }
+  
 ]
