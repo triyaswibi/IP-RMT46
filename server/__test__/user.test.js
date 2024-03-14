@@ -6,9 +6,9 @@ const { signToken } = require('../helpers/jwt.js');
 const { queryInterface } = sequelize
 
 const new_user = {
-    fullName: "lunar",
-    email: "lunar@mail.com",
-    password: "lunar11",
+    fullName: "jelly serah",
+    email: "jelly@mail.com",
+    password: "jelly11",
     phoneNumber: "86585851841",
     address: "cikampek"
 }
@@ -177,7 +177,7 @@ describe("POST /register", () => {
                 .post("/register")
                 .set("Authorization", "Bearer " + access_token)
                 .send({
-                    fullName: new_user.fullName,
+                    fullName: new_user_3.fullName,
                     email: new_user_2.email,
                     password: new_user.password,
                     phoneNumber: new_user.phoneNumber,
