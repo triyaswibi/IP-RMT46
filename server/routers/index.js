@@ -9,11 +9,11 @@ const routerCategory = require("./category")
 
 router.get("/", home);
 router.post("/login", loginUser);
-router.post("/register", registerUser);
 
 router.use(authentication);
-router.use('/Vechile', routerVechile);
-router.use('/Category', routerCategory);
+router.post("/register", registerUser);
+router.use('/vechile', routerVechile);
+router.use('/category', routerCategory);
 
 router.use(errorHandler);
 

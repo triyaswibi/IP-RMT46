@@ -5,6 +5,7 @@ module.exports = (error, req, res, next) => {
     switch (error.name) {
         case "SequelizeValidationError":
         case "SequelizeUniqueConstraintError":
+        case "CustomError":
             status = 400;
             message = error.errors[0].message;
             break;

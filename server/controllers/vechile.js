@@ -52,7 +52,9 @@ module.exports = class vechileController {
             const findVechile = await Vechile.findByPk(+id)
             if(!findVechile) throw {name: "NotFound"}
 
-            await findVechile.update(req.body)
+            const { name, description, imgUrl, price, categoryId, authorId } = req.body
+
+            await findVechile.update({ name, description, imgUrl, price, categoryId, authorId })
             res.status(200).json(findVechile)
         } catch (error) {
             next(error)
@@ -91,9 +93,6 @@ module.exports = class vechileController {
             await Vechile.update({ imgUrl: result.secure_url });
             res.status(200).json({ message: `Image for ${vechile.name} successfully updated` });
         } catch (error) {
-            if (error.name === "CustomError") {
-                return res.status(error.status).json({ message: error.message });
-            }
             next(error);
         }
     }

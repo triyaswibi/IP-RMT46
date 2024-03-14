@@ -25,7 +25,7 @@ module.exports = class categoryController {
             const findCategory = await Category.findByPk(+id)
             if(!findCategory) throw {name: "NotFound"}
             
-            await findCategory.update(req.body, { where: { id }})
+            await findCategory.update(req.body)
             res.status(200).json({ msg: `Category ${findCategory.category} has been updated` })
         } catch (error) {
             next(error)
