@@ -17,7 +17,7 @@ const new_user_2 = {
     fullName: "abdul",
     email: "ninja2@mail.com",
     password: "ninja2",
-    role: "admin",
+    role: "Admin",
     phoneNumber: "318319838912",
     address: "cikarang"
 }
@@ -94,18 +94,18 @@ describe("POST /login", () => {
 
 describe("POST /register", () => {
     describe("Succes Register", () => {
-        test.only("should return status 201 and object of new user", async () => {
+        test("should return status 201 and object of new user", async () => {
             let { status, body } = await request(app)
                 .post("/register")
                 .set("Authorization", "Bearer " + access_token)
-                .send(new_user_3)
+                .send(new_user)
 
             expect(status).toBe(201);
             expect(body).toHaveProperty("id", expect.any(Number));
-            expect(body).toHaveProperty("fullName", new_user_3.fullName);
-            expect(body).toHaveProperty("email", new_user_3.email);
-            expect(body).toHaveProperty("phoneNumber", new_user_3.phoneNumber);
-            expect(body).toHaveProperty("address", new_user_3.address);
+            expect(body).toHaveProperty("fullName", new_user.fullName);
+            expect(body).toHaveProperty("email", new_user.email);
+            expect(body).toHaveProperty("phoneNumber", new_user.phoneNumber);
+            expect(body).toHaveProperty("address", new_user.address);
         })
     })
 
@@ -177,7 +177,7 @@ describe("POST /register", () => {
                 .post("/register")
                 .set("Authorization", "Bearer " + access_token)
                 .send({
-                    fullName: new_user_3.fullName,
+                    fullName: new_user.fullName,
                     email: new_user_2.email,
                     password: new_user.password,
                     phoneNumber: new_user.phoneNumber,
