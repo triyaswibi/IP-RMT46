@@ -48,7 +48,7 @@ module.exports = class userController {
 
     static async googleLogin(req, res, next) {
         try {
-            es.status(200).json({ message: 'Login Success' })
+            res.status(200).json({ message: 'Login Success' })
         } catch (error) {
             next(error)
         }
