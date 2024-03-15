@@ -8,10 +8,12 @@ const {
   deactiveVechileById,
   updateVechileImgUrlById,
 } = require("../controllers/vechile");
+const { initiateMidtransTrx } = require("../controllers/payment")
 const authorization = require("../middlewares/authorization");
 const multer = require('multer');  
 const upload = multer({storage: multer.memoryStorage()})
 
+router.get("/payment/midtrans/initiate", initiateMidtransTrx)
 router.post("/", createVechile);
 router.get("/", getVechile);
 router.use(authorization);
