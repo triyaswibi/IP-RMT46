@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "Toyota Camry",
+    "description": "Mobil sedan mewah dengan desain yang elegan dan performa yang handal.",
+    "imgUrl": "https://img.freepik.com/premium-photo/car-isolated-white-background-toyota-camry-midsize-sedan-white-car-blank-clean-white-black_655090-605595.jpg",
+    "price": 300000000,
+    "categoryId": 1,
+    "authorId": 1
+  },
+  {
+    "id": 2,
+    "name": "Honda Civic",
+    "description": "Sedan sporty dengan teknologi canggih dan efisiensi bahan bakar yang baik.",
+    "imgUrl": "https://img.freepik.com/premium-photo/honda-civic-exhibition_847439-80555.jpg",
+    "price": 270000000,
+    "categoryId": 3,
+    "authorId": 2
+  },
+  {
+    "id": 3,
+    "name": "Nissan X-Trail",
+    "description": "SUV kompak yang tangguh dengan kenyamanan dan fitur keamanan yang lengkap.",
+    "imgUrl": "https://img.freepik.com/premium-photo/white-midsize-family-urban-suv-car-white-background-3d-illustration_101266-14702.jpg",
+    "price": 350000000,
+    "categoryId": 13,
+    "authorId": 3
+  },
+  {
+    "id": 4,
+    "name": "Toyota Fortuner",
+    "description": "SUV yang kokoh dan kuat, cocok untuk petualangan di jalanan dan medan off-road.",
+    "imgUrl": "https://img.freepik.com/premium-photo/urban-chic-stylish-image-featuring-gray-toyota-fortuner-amidst-clean-white-background_1086226-1027.jpg",
+    "price": 400000000,
+    "categoryId": 1,
+    "authorId": 4
+  },
+  {
+    "id": 5,
+    "name": "Mitsubishi Pajero Sport",
+    "description": "SUV tangguh dengan kabin yang luas dan performa off-road yang handal.",
+    "imgUrl": "https://img.freepik.com/premium-photo/mitsubishi-pajero-forest-trail_899870-19752.jpg",
+    "price": 380000000,
+    "categoryId": 2,
+    "authorId": 5
+  },
+  {
+    "id": 6,
+    "name": "Toyota Alphard",
+    "description": "MPV mewah dengan desain interior yang elegan dan fitur kenyamanan premium.",
+    "imgUrl": "https://img.freepik.com/premium-photo/toyota-alphard_860796-2.jpg",
+    "price": 600000000,
+    "categoryId": 1,
+    "authorId": 1
+  },
+  {
+    "id": 7,
+    "name": "Honda Odyssey",
+    "description": "MPV keluarga dengan kabin yang luas dan fitur hiburan yang lengkap.",
+    "imgUrl": "https://img.freepik.com/premium-photo/car-isolated-white-background-honda-odyssey-white-car-blank-clean-white-backgr-white-black_655090-606842.jpg",
+    "price": 550000000,
+    "categoryId": 3,
+    "authorId": 2
+  },
+  {
+    "id": 8,
+    "name": "Daihatsu Terios",
+    "description": "SUV kompak dengan desain yang stylish dan harga yang terjangkau.",
+    "imgUrl": "https://images.bisnis.com/posts/2021/09/17/1443728/20210917_134613.jpg",
+    "price": 250000000,
+    "categoryId": 12,
+    "authorId": 3
+  },
+  {
+    "id": 9,
+    "name": "Toyota Avanza",
+    "description": "MPV kompak dengan performa yang handal dan ruang kabin yang luas.",
+    "imgUrl": "https://imgcdnblog.carmudi.com.ph/wp-content/uploads/2021/11/10154020/Toyota-Avanza-E-G-7.jpg",
+    "price": 200000000,
+    "categoryId": 1,
+    "authorId": 4
+  },
+  {
+    "id": 10,
+    "name": "Suzuki Ertiga",
+    "description": "MPV hemat bahan bakar dengan desain yang modern dan fitur yang lengkap.",
+    "imgUrl": "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2022/06/13/1284196161.jpg",
+    "price": 220000000,
+    "categoryId": 11,
+    "authorId": 5
+  },
+  {
+    "id": 11,
+    "name": "BMW 3 Series",
+    "description": "Sedan mewah dengan performa tinggi dan desain yang elegan.",
+    "imgUrl": "https://img.freepik.com/premium-photo/bmw-3series-generative-ai_1017677-805.jpg",
+    "price": 600000000,
+    "categoryId": 10,
+    "authorId": 1
+  },
+  {
+    "id": 12,
+    "name": "Mercedes-Benz C-Class",
+    "description": "Sedan premium dengan teknologi terkini dan kenyamanan yang luar biasa.",
+    "imgUrl": "https://i.gaw.to/vehicles/photos/40/21/402128-2020-mercedes-benz-c-class.jpg?640x400",
+    "price": 700000000,
+    "categoryId": 9,
+    "authorId": 2
+  },
+  {
+    "id": 13,
+    "name": "Audi Q5",
+    "description": "SUV mewah dengan performa yang impresif dan fitur-fitur canggih.",
+    "imgUrl": "https://img.freepik.com/premium-photo/audi-q5-exhibition_847439-70682.jpg",
+    "price": 800000000,
+    "categoryId": 8,
+    "authorId": 3
+  },
+  {
+    "id": 14,
+    "name": "Honda CR-V",
+    "description": "SUV serbaguna dengan kinerja tangguh dan ruang kargo yang luas.",
+    "imgUrl": "https://img.freepik.com/premium-photo/car-isolated-white-background-honda-crv-white-car-blank-clean-white-backgroun-white-black_655090-606754.jpg",
+    "price": 350000000,
+    "categoryId": 3,
+    "authorId": 5
+  },
+  {
+    "id": 15,
+    "name": "Toyota Rush",
+    "description": "SUV compact yang tangguh dengan desain yang modern dan performa yang handal.",
+    "imgUrl": "https://toyotamakati.com.ph/wp-content/uploads/2020/08/rush1-1024x576.jpg",
+    "price": 250000000,
+    "categoryId": 1,
+    "authorId": 2
+  },
+  {
+    "id": 16,
+    "name": "Mazda CX-5",
+    "description": "SUV elegan dengan desain modern, kinerja dinamis, dan kenyamanan premium.",
+    "imgUrl": "https://cdn0-production-images-kly.akamaized.net/YzA3vr-P5asHRNXKyNLHOEm5W7U=/1200x900/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3983109/original/049454700_1648921426-IMG-4065.jpeg",
+    "price": 380000000,
+    "categoryId": 14,
+    "authorId": 5
+  },
+  {
+    "id": 17,
+    "name": "Ford Everest",
+    "description": "SUV kokoh dengan kapasitas tempat duduk yang luas dan kemampuan off-road yang handal.",
+    "imgUrl": "https://i.pinimg.com/736x/c2/de/0f/c2de0fb616a625cb9cbd327ddbf18b29.jpg",
+    "price": 450000000,
+    "categoryId": 7,
+    "authorId": 1
+  },
+  {
+    "id": 18,
+    "name": "Chevrolet Captiva",
+    "description": "SUV premium dengan desain yang elegan dan fitur-fitur canggih.",
+    "imgUrl": "https://imagecdnsa.zigwheels.ae/large/gallery/exterior/6/84/chevrolet-captiva-front-side-view-410790.jpg",
+    "price": 420000000,
+    "categoryId": 6,
+    "authorId": 2
+  },
+  {
+    "id": 19,
+    "name": "Kia Seltos",
+    "description": "SUV kompak dengan gaya yang sporty dan performa yang efisien.",
+    "imgUrl": "https://c4.wallpaperflare.com/wallpaper/792/445/230/grey-metallic-kia-2020-seltos-hd-wallpaper-preview.jpg",
+    "price": 300000000,
+    "categoryId": 5,
+    "authorId": 3
+  },
+  {
+    "id": 20,
+    "name": "Hyundai Tucson",
+    "description": "SUV modern dengan kenyamanan premium dan fitur-fitur canggih.",
+    "imgUrl": "https://img.freepik.com/premium-photo/hyundai-tucson-exhibition_847439-68215.jpg",
+    "price": 370000000,
+    "categoryId": 4,
+    "authorId": 4
+  }
+]

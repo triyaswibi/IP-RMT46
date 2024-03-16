@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "category": "Toyota"
+  },
+  {
+    "id": 2,
+    "category": "Mitsubishi"
+  },
+  {
+    "id": 3,
+    "category": "Honda"
+  },
+  {
+    "id": 4,
+    "category": "Hyundai"
+  },
+  {
+    "id": 5,
+    "category": "Kia"
+  },
+  {
+    "id": 6,
+    "category": "Chevrolet"
+  },
+  {
+    "id": 7,
+    "category": "Ford"
+  },
+  {
+    "id": 8,
+    "category": "Audi"
+  },
+  {
+    "id": 9,
+    "category": "Mercedes Benz"
+  },
+  {
+    "id": 10,
+    "category": "BMW"
+  },
+  {
+    "id": 11,
+    "category": "Suzuki"
+  },
+  {
+    "id": 12,
+    "category": "Daihatsu"
+  },
+  {
+    "id": 13,
+    "category": "Nissan"
+  },
+  {
+    "id": 14,
+    "category": "Mazda"
+  }
+  
+]
