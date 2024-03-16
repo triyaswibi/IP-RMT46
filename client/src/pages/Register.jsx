@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "../utils/axios";
+import Button from "../components/Button";
 
 export default function RegisterPage() {
     const navigate = useNavigate();
@@ -26,7 +27,7 @@ export default function RegisterPage() {
       event.preventDefault();
   
       try {
-        let response = await axios({
+        await axios({
           url: "/register",
           method: "POST",
           data: { ...form },
@@ -35,9 +36,9 @@ export default function RegisterPage() {
           },
         });
   
-        navigate("/vechile");
+        navigate("/");
       } catch (error) {
-        toast(error.response?.data?.message || error.message, "error");
+        console.log(error)
       }
     };
 
@@ -55,17 +56,17 @@ export default function RegisterPage() {
                   <h1 className="h3 mb-3 display-1">Register User</h1>
                   <div className="mb-3">
                     <div className="d-flex justify-content-between">
-                      <label htmlFor="register-username">Username</label>
+                      <label htmlFor="register-username">Full Name</label>
                       <label className="text-danger text-end fw-bold">*</label>
                     </div>
                     <input
                       type="text"
                       className="form-control"
-                      id="register-username"
-                      placeholder="Enter username ..."
+                      id="register-fullName"
+                      placeholder="Enter fullName ..."
                       autoComplete="off"
-                      name="username"
-                      value={form.username}
+                      name="fullName"
+                      value={form.fullName}
                       onChange={handleChangeInput}
                     />
                   </div>
@@ -80,7 +81,6 @@ export default function RegisterPage() {
                       id="register-email"
                       placeholder="Enter email address ..."
                       autoComplete="off"
-                      required=""
                       name="email"
                       value={form.email}
                       onChange={handleChangeInput}
@@ -97,7 +97,6 @@ export default function RegisterPage() {
                       id="register-password"
                       placeholder="Enter password ..."
                       autoComplete="off"
-                      required=""
                       name="password"
                       value={form.password}
                       onChange={handleChangeInput}
@@ -118,10 +117,10 @@ export default function RegisterPage() {
                   </div>
                   <div className="mb-3">
                     <label htmlFor="register-address">Address</label>
-                    <textarea
-                      id="register-address"
+                    <input
+                      type="text"
                       className="form-control"
-                      rows={3}
+                      id="register-address"
                       placeholder="Enter address (optional) ..."
                       autoComplete="off"
                       name="address"

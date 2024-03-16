@@ -31,7 +31,7 @@ export default function LoginPage() {
         data: userData,
       });
       localStorage.setItem("token", data.access_token);
-      navigate("/homePage");
+      navigate("/vechile");
     } catch (error) {
       toast(error.response?.data?.message || error.message, "error");
     }

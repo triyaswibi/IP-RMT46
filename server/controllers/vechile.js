@@ -15,8 +15,7 @@ module.exports = class vechileController {
                     model: User,
                     attributes: ["email"]
             }, {
-                model: Category,
-                attributes: ["category"]
+                model: Category
             }] 
         });
             res.status(200).json(showVechile)
@@ -37,9 +36,9 @@ module.exports = class vechileController {
     static async getVechileById(req, res, next) {
         const { id } = req.params
         try {
-            const findVechile = await Vechile.findByPk(+id)
+            const findVechile = await Vechile.findByPk(id, {include : [{ model: Category}]})
             if(!findVechile) throw {name: "NotFound"}
-            
+
             res.status(200).json(findVechile)
         } catch (error) {
             next(error)

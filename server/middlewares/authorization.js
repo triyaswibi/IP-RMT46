@@ -3,7 +3,7 @@ const { Vechile } = require('../models');
 
 async function authorization (req, res, next) {
     try {
-        if(req.user.role === "admin"){
+        if(req.user.role === "Admin"){
             next()
         } else {
         const {id} = req.params
