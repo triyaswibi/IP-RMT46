@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { handleLogin } from "../features/userSlice";
+import axios from "../utils/axios";
 
 export default function LoginPage() {
   const dispatch = useDispatch();
@@ -25,8 +26,28 @@ export default function LoginPage() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    dispatch(handleLogin({userData, navigate}))
+    dispatch(handleLogin({ userData, navigate }));
   };
+
+  const handleCredentialResponse = async ({ credential }) => {
+    const { data } = await axios.post("/google-login", {
+      googleToken: credential,
+    });
+    localStorage.setItem("access_token", data.access_token);
+    navigate("/vechile");
+  };
+
+  useEffect(() => {
+    google.accounts.id.initialize({
+      client_id:
+        "414733913348-jgbp1cosinenhu9bknunn84ftilpsvmp.apps.googleusercontent.com",
+      callback: handleCredentialResponse,
+    });
+    google.accounts.id.renderButton(
+      document.getElementById("buttonDiv"),
+      { theme: "outline", size: "large" }
+    );
+  }, []);
 
   return (
     <>
@@ -101,6 +122,12 @@ export default function LoginPage() {
                     >
                       Log In
                     </button>
+                    <div className="d-flex justify-content-center mb-5">
+                      - or -
+                    </div>
+                    <div className="d-flex justify-content-center">
+                      <div id="buttonDiv"></div>
+                    </div>
                   </form>
                 </div>
               </div>

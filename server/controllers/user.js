@@ -1,6 +1,8 @@
 const { User } = require('../models')
 const { comparePassword } = require('../helpers/bcrypt')
 const { signToken } = require('../helpers/jwt')
+const { OAuth2Client } = require("google-auth-library");
+const client = new OAuth2Client();
 
 module.exports = class userController {
     static async registerUser(req, res, next) {
@@ -47,10 +49,32 @@ module.exports = class userController {
     }
 
     static async googleLogin(req, res, next) {
+        const { googleToken } = req.body;
         try {
-            res.status(200).json({ message: 'Login Success' })
-        } catch (error) {
-            next(error)
+          const ticket = await client.verifyIdToken({
+            idToken: googleToken,
+            audience:
+              "414733913348-jgbp1cosinenhu9bknunn84ftilpsvmp.apps.googleusercontent.com",
+          });
+          const { email, fullName } = ticket.getPayload();
+          const password = Math.random().toString();
+          const [user, created] = await User.findOrCreate({
+            where: { email },
+            defaults: {
+              fullName,
+              email,
+              password,
+            },
+          });
+          console.log({ user, created }, "<<< user created googleLogin");
+    
+          // create token
+          const access_token = signToken({ id: user.id });
+          res
+            .status(200)
+            .json({ message: "Logged in as " + user.email, access_token });
+        } catch (err) {
+          next(err);
         }
-    }
+      }
 }
