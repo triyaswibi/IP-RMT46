@@ -68,13 +68,12 @@ module.exports = class userController {
           });
           console.log({ user, created }, "<<< user created googleLogin");
     
-          // create token
           const access_token = signToken({ id: user.id });
           res
             .status(200)
             .json({ message: "Logged in as " + user.email, access_token });
-        } catch (err) {
-          next(err);
+        } catch (error) {
+          next(error);
         }
       }
 }
