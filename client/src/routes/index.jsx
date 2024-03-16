@@ -5,6 +5,7 @@ import Register from "../pages/Register.jsx";
 import VechilePageList from "../pages/VechilePage.jsx";
 import VechileDetailPage from "../pages/VechileDetail.jsx";
 import VechileCreateForm from "../pages/CreateVechile.jsx";
+import UploadImage from "../pages/UploadImage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/vechile/:vechileId",
         element: <VechileDetailPage />,
+      },
+      {
+        path: "/vechile/imgUrl/:vechileId",
+        element: <UploadImage />,
       },
     ],
   },
