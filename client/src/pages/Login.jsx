@@ -60,9 +60,10 @@ export default function LoginPage() {
             <div className="row">
               <div className="col-12 col-md-6 border-end p-5 text-left">
                 <img
-                  src="https://d2xjmi1k71iy2m.cloudfront.net/dairyfarm/id/images/561/1056141_PE848273_S4.webp"
+                  src="https://img.freepik.com/premium-vector/cars-dealership-center-showroom-interior_701961-379.jpg"
                   width="350px"
-                  alt="sofa"
+                  height="300px"
+                  alt="admin"
                 />
               </div>
               <div className="col-12 col-md-6 p-5 text-left">
