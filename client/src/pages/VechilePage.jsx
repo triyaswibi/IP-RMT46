@@ -1,47 +1,23 @@
-import { useEffect, useState } from "react";
-import axios from "../utils/axios";
+import { useDispatch, useSelector } from "react-redux";
 import SearchPage from "../components/Search";
 import VechileCardList from "../components/VechileCard";
+import { fetchVechiles, selectVechileState } from "../features/vechileSlice";
+import { useEffect } from "react";
 
 export default function VechilePageList() {
-  const [nameFilter, setFilterName] = useState("");
-  const [vechileData, setVechileData] = useState([]);
-
-  const handleSetFilter = async (search) => {
-    setFilterName(search);
-  };
-
-  const fetchVechileData = async (nameFilter) => {
-    let url = `/vechile`;
-
-    if (nameFilter) {
-      url = `/vechile?search=${nameFilter}`;
-    }
-
-    try {
-      let { data } = await axios({
-        url,
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
-      setVechileData(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const dispatch = useDispatch();
+  const { vechiles } = useSelector(selectVechileState);
 
   useEffect(() => {
-    fetchVechileData(nameFilter);
-  }, [nameFilter]);
+    dispatch(fetchVechiles())
+  },[])
 
   return (
     <>
-        <SearchPage setFilter={handleSetFilter} />
+        <SearchPage />
         <section className="ms-sm-auto px-md-5 my-3">
         <div className="row row-cols-1 row-cols-md-3 g-4">
-          {vechileData.map((vechile, index) => {
+          {vechiles.map((vechile, index) => {
             return (
               <VechileCardList
                 key={index}

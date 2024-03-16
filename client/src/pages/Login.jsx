@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "../utils/axios";
-import toast from "../utils/toastify.js";
+import { handleLogin } from "../features/userSlice";
 
 export default function LoginPage() {
+  const dispatch = useDispatch();
+
   const [userData, setUserData] = useState({
     email: "",
     password: "",
@@ -23,18 +25,7 @@ export default function LoginPage() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-    try {
-      let { data } = await axios({
-        url: "/login",
-        method: "POST",
-        data: userData,
-      });
-      localStorage.setItem("token", data.access_token);
-      navigate("/vechile");
-    } catch (error) {
-      toast(error.response?.data?.message || error.message, "error");
-    }
+    dispatch(handleLogin({userData, navigate}))
   };
 
   return (

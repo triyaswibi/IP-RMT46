@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useDebugValue, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "../utils/axios";
 import Button from "../components/Button";
+import { useDispatch } from "react-redux";
 
 export default function RegisterPage() {
+  const dispatch = useDispatch();
     const navigate = useNavigate();
     const [form, setForm] = useState({
       fullName: "",
@@ -25,21 +26,7 @@ export default function RegisterPage() {
   
     const handleCreateUser = async (event) => {
       event.preventDefault();
-  
-      try {
-        await axios({
-          url: "/register",
-          method: "POST",
-          data: { ...form },
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        });
-  
-        navigate("/");
-      } catch (error) {
-        console.log(error)
-      }
+      dispatch(handleCreateUser({form, navigate}))
     };
 
   return (

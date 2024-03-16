@@ -8,10 +8,10 @@ export default function VechileCardList({id, imgUrl, name, price, description}) 
         <div className="col">
           <div className="card h-100">
             <img src={imgUrl} className="card-img-top" alt="..." />
-            <div className="card-body">
-              <h3 className="card-title"> {name} </h3>
+            <div className="card-body my-3">
+              <h5 className="card-title display-5"> {name} </h5> <br />
               <h5 className="card-title"> {price} </h5>
-              <p className="card-text">{description}</p>
+              <p className="card-text text-muted">{description}</p>
             </div>
             <div className="card-body">
               <Button

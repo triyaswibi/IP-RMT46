@@ -1,6 +1,9 @@
 import { useState } from "react";
+import Button from "./Button";
+import { useNavigate } from "react-router-dom";
 
-export default function SearchPage({setFilter}) {
+export default function SearchPage({ setFilter }) {
+  const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const handleChangeInput = (event) => {
     setSearch(event.target.value);
@@ -10,10 +13,16 @@ export default function SearchPage({setFilter}) {
     event.preventDefault();
     setFilter(search);
   };
-  
+
   return (
     <>
-      <div className="container navbar justify-content-end ">
+      <div className="container navbar justify-content-end">
+        <Button
+          name={"Add Vechile"}
+          buttonClass={"btn btn-outline-warning btn-md"}
+          buttonType={"submit"}
+          onClick={() => navigate(`/vechile/create`)}
+        />
         <form
           className="d-flex mt-3 p-2 w-40"
           role="search"

@@ -4,6 +4,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register.jsx";
 import VechilePageList from "../pages/VechilePage.jsx";
 import VechileDetailPage from "../pages/VechileDetail.jsx";
+import VechileCreateForm from "../pages/CreateVechile.jsx";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/vechile",
         element: <VechilePageList />,
+      },
+      {
+        path: "/vechile/create",
+        element: <VechileCreateForm />,
       },
       {
         path: "/vechile/:vechileId",
