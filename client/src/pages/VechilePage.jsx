@@ -9,13 +9,13 @@ export default function VechilePageList() {
   const { vechiles } = useSelector(selectVechileState);
 
   useEffect(() => {
-    dispatch(fetchVechiles())
-  },[])
+    dispatch(fetchVechiles());
+  }, []);
 
   return (
     <>
-        <SearchPage />
-        <section className="ms-sm-auto px-md-5 my-3">
+      <SearchPage />
+      <section className="ms-sm-auto px-md-5 my-3">
         <div className="row row-cols-1 row-cols-md-3 g-4">
           {vechiles.map((vechile, index) => {
             return (
@@ -33,8 +33,8 @@ export default function VechilePageList() {
               />
             );
           })}
-          </div>
-        </section>
+        </div>
+      </section>
     </>
   );
 }

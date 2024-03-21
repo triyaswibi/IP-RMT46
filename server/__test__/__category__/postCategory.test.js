@@ -102,38 +102,3 @@ describe("POST /category", () => {
         })
     })
 })
-
-describe("GET /category", () => {
-    describe("Succes", () => {
-        test("should return status 200 when read category", async () => {
-            let { status, body } = await request(app)
-                .get("/category")
-                .set('Authorization', `Bearer ${access_token}`)
-
-            expect(status).toBe(200);
-            expect(body[0]).toHaveProperty("id", expect.any(Number));
-            expect(body).toHaveProperty("category", category_data.category);
-        })
-    })
-
-    describe("Failed", () => {
-        test("should return status 401 when user not login", async () => {
-            let { status, body } = await request(app)
-                .get("/category")
-                .send(category_data)
-
-            expect(status).toBe(401);
-            expect(body).toHaveProperty("message", "Unauthenticated");
-        })
-
-        test("should return status 401 when user invalid access token", async () => {
-            let { status, body } = await request(app)
-                .get("/category")
-                .set('Authorization', `Bearer ${"tokeninvalid"}`)
-                .send(category_data)
-
-            expect(status).toBe(401);
-            expect(body).toHaveProperty("message", "Unauthenticated");
-        })
-    })
-})

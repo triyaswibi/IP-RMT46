@@ -3,13 +3,14 @@ import SearchPage from "../components/Search";
 import { useEffect, useState } from "react";
 import axios from "../utils/axios";
 import Button from "../components/Button";
+import getPayment from "../utils/toastify";
 
 export default function VechileDetailPage() {
   const navigate = useNavigate();
   const { vechileId } = useParams();
   const [vechileData, setVechileData] = useState([]);
 
-  const getVechileDetail = async (vechileId) => {
+  const getVechileDetail = async () => {
     try {
       let { data } = await axios({
         url: `/vechile/${vechileId}`,
@@ -18,6 +19,7 @@ export default function VechileDetailPage() {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
+      console.log(data);
       setVechileData(data);
     } catch (error) {
       console.log(error);
@@ -30,6 +32,29 @@ export default function VechileDetailPage() {
     }
   }, [vechileId]);
 
+  const handlePayment = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios({
+        url: `vechile/payment/midtrans/initiate/${vechileId}`,
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+        data: {}
+      });
+      const { token } = response.data;
+      window.snap.pay(token, {
+        onSuccess: async () => {
+          getPayment("Succes Payment!");
+          navigate('/vechile')
+        },
+      });
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   return (
     <>
       <SearchPage />
@@ -39,14 +64,7 @@ export default function VechileDetailPage() {
             <img src={vechileData.imgUrl} className="card-img-top" alt="..." />
             <div className="card-body">
               <h2 className="card-title"> {vechileData.name} </h2> <br />
-              <h5 className="card-title">
-                {" "}
-                {new Intl.NumberFormat("id-ID", {
-                  style: "currency",
-                  currency: "IDR",
-                  maximumFractionDigits: 0,
-                }).format(vechileData.price)}{" "}
-              </h5>
+              <h5 className="card-title"> {vechileData.price} </h5>
               <p className="card-text">{vechileData.description}</p>
               <div className="row mt-5 mb-3">
                 <div className="col-6">
@@ -59,10 +77,12 @@ export default function VechileDetailPage() {
                 </div>
                 <div className="col-6">
                   <Button
+                    onClick={handlePayment}
                     name={"Payment"}
                     buttonClass={
                       "btn btn-lg btn-warning rounded-pill w-100 p-2"
                     }
+                    id={"pay-button"}
                     buttonType={"submit"}
                   />
                 </div>

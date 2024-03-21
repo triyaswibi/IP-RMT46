@@ -123,7 +123,7 @@ export default function LoginPage() {
                     >
                       Log In
                     </button>
-                    <div className="d-flex justify-content-center mb-5">
+                    <div className="d-flex justify-content-center mb-3 my-5">
                       - or -
                     </div>
                     <div className="d-flex justify-content-center">

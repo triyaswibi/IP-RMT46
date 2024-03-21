@@ -1,7 +1,8 @@
-import { useDebugValue, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import { useDispatch } from "react-redux";
+import { handleCreateUser as handleRegister } from "../features/userSlice";
 
 export default function RegisterPage() {
   const dispatch = useDispatch();
@@ -24,9 +25,9 @@ export default function RegisterPage() {
       });
     };
   
-    const handleCreateUser = async (event) => {
+    const handleCreateUser = (event) => {
       event.preventDefault();
-      dispatch(handleCreateUser({form, navigate}))
+      dispatch(handleRegister({form, navigate}))
     };
 
   return (

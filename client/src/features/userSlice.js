@@ -25,7 +25,7 @@ export const handleLogin = createAsyncThunk(
 
 export const handleCreateUser = createAsyncThunk(
   "user/handleCreateUser",
-  async ({form, navigate}) => {
+  async (payload, {dispatch, rejectWithValue}) => {
     try {
       await axios({
         url: "/register",
