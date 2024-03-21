@@ -13,7 +13,7 @@ const authorization = require("../middlewares/authorization");
 const multer = require('multer');  
 const upload = multer({storage: multer.memoryStorage()})
 
-router.get("/payment/midtrans/initiate", initiateMidtransTrx)
+router.post("/payment/midtrans/initiate/:id", initiateMidtransTrx)
 router.post("/", createVechile);
 router.get("/", getVechile);
 router.use(authorization);

@@ -1,15 +1,32 @@
-import { useDispatch, useSelector } from "react-redux";
+// import { useDispatch, useSelector } from "react-redux";
 import SearchPage from "../components/Search";
 import VechileCardList from "../components/VechileCard";
-import { fetchVechiles, selectVechileState } from "../features/vechileSlice";
-import { useEffect } from "react";
+// import { fetchVechiles, selectVechileState } from "../features/vechileSlice";
+import { useEffect, useState } from "react";
+import axios from "../utils/axios";
 
 export default function VechilePageList() {
-  const dispatch = useDispatch();
-  const { vechiles } = useSelector(selectVechileState);
-
+  // const dispatch = useDispatch();
+  // const { vechiles } = useSelector(selectVechileState);
+  const [ vechiles, setVehiclesData ] = useState([]);
+  
   useEffect(() => {
-    dispatch(fetchVechiles())
+    // dispatch(fetchVechiles())
+    const fetchVechile = async () => {
+      try {
+        let { data } = await axios({
+          url: "/vechile",
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        });
+        setVehiclesData(data);
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    fetchVechile();
   },[])
 
   return (

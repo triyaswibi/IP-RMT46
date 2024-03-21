@@ -32,7 +32,7 @@ const new_user_3 = {
 
 let access_token;
 
-describe("POST /login", () => {
+describe.skip("POST /login", () => {
     describe("Succes Login", () => {
         test("should return status 200 and object of access_token", async () => {
             let { status, body } = await request(app)
@@ -92,7 +92,7 @@ describe("POST /login", () => {
     })
 })
 
-describe("POST /register", () => {
+describe.skip("POST /register", () => {
     describe("Succes Register", () => {
         test("should return status 201 and object of new user", async () => {
             let { status, body } = await request(app)

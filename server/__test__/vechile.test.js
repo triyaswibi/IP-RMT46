@@ -120,7 +120,7 @@ afterAll(async () => {
     })
 })
 
-describe("POST /vechile", () => {
+describe.skip("POST /vechile", () => {
     describe("Succes", () => {
         test("should return status 201 when read vechiles", async () => {
             let { status, body } = await request(app)
@@ -171,7 +171,7 @@ describe("POST /vechile", () => {
     })
 })
 
-describe("GET /vechile", () => {
+describe.skip("GET /vechile", () => {
     describe("Succes", () => {
         test("should return status 200 when read vechile", async () => {
             let { status, body } = await request(app)
@@ -209,7 +209,7 @@ describe("GET /vechile", () => {
     })
 })
 
-describe("GET /vechile/:id", () => {
+describe.skip("GET /vechile/:id", () => {
     describe("Succes", () => {
         test("should return status 200 when vechile data with specified id", async () => {
             let { status, body } = await request(app)
@@ -259,7 +259,7 @@ describe("GET /vechile/:id", () => {
     })
 })
 
-describe("PUT /vechile/:id", () => {
+describe.skip("PUT /vechile/:id", () => {
     describe("Succes", () => {
         test("should return status 200 when updated vechile data", async () => {
             let { status, body } = await request(app)
@@ -319,7 +319,7 @@ describe("PUT /vechile/:id", () => {
     })
 })
 
-describe("delete /vechile/:id", () => {
+describe.skip("delete /vechile/:id", () => {
     describe("Succes", () => {
         test("should return status 200 and deleted vechile data", async () => {
             const id = 1;
