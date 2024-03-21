@@ -9,22 +9,25 @@ import UploadImage from "../pages/UploadImage.jsx";
 
 const router = createBrowserRouter([
   {
+    path: "/login",
+    element: <Login />,
+    loader: () => {
+      return localStorage.getItem("token") ? redirect("/") : null
+    },
+  },
+  {
+    path: "/register",
+    element: <Register />,
+  },
+  {
     path: "/",
     element: <App />,
     children: [
       {
         index: true,
         loader: () => {
-          return redirect("/login");
+          return !localStorage.getItem("token") ? redirect("/login") : null
         },
-      },
-      {
-        path: "/login",
-        element: <Login />,
-      },
-      {
-        path: "/register",
-        element: <Register />,
       },
       {
         path: "/vechile",

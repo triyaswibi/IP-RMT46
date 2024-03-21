@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
-import axios from "../utils/axios";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCategory, fetchCreateVechiles, selectVechileState } from "../features/vechileSlice";
 
 export default function VechileCreateForm() {
+  const { categories } = useSelector(selectVechileState);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [form, setForm] = useState({
     name: "",
@@ -12,8 +15,6 @@ export default function VechileCreateForm() {
     imgUrl: "",
     categoryId: "-1",
   });
-
-  const [categories, setCategory] = useState([]);
 
   const handleChangeInput = (event) => {
     const key = event.target.name;
@@ -27,39 +28,11 @@ export default function VechileCreateForm() {
 
   const handleCreateVechile = async (event) => {
     event.preventDefault();
-    try {
-      await axios({
-        url: "/vechile",
-        method: "POST",
-        data: { ...form, categories: Number(form.categoryId) },
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
-
-      navigate("/");
-    } catch (error) {
-      console.log(error, "dari error");
-    }
-  };
-
-  const getCategory = async () => {
-    try {
-      let { data } = await axios({
-        url: "/category",
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
-      setCategory(data);
-    } catch (error) {
-      console.log(error);
-    }
+    dispatch(fetchCreateVechiles({form, categories: Number(form.categoryId) ,navigate}))
   };
 
   useEffect(() => {
-    getCategory();
+    dispatch(fetchCategory())
   }, []);
 
   return (
@@ -76,7 +49,7 @@ export default function VechileCreateForm() {
                 className="form-control"
                 placeholder="Enter vechile name"
                 autoComplete="off"
-                name="title"
+                name="name"
                 value={form.name}
                 onChange={handleChangeInput}
               />
@@ -125,7 +98,7 @@ export default function VechileCreateForm() {
                 </option>
                 {categories.map((category) => (
                   <option key={category.id} value={category.id}>
-                    {category.name}
+                    {category.category}
                   </option>
                 ))}
               </select>

@@ -1,10 +1,7 @@
 import { useState } from "react";
-import Button from "./Button";
-import { useNavigate, useParams } from "react-router-dom";
+import AddVechile from "./AddVechile";
 
 export default function SearchPage({ setFilter }) {
-  const navigate = useNavigate();
-  const { vechileId } = useParams();
   const [search, setSearch] = useState("");
   const handleChangeInput = (event) => {
     setSearch(event.target.value);
@@ -18,18 +15,9 @@ export default function SearchPage({ setFilter }) {
   return (
     <>
       <div className="container navbar justify-content-between">
-        <Button
-          name={"Add Vechile"}
-          buttonClass={"btn btn-outline-warning btn-md"}
-          buttonType={"submit"}
-          onClick={() => navigate(`/vechile/create`)}
-        />
-        <Button
-          name={"Edit Image Car By Admin"}
-          buttonClass={"btn btn-outline-warning btn-md"}
-          buttonType={"submit"}
-          onClick={() => navigate(`/vechile/imgUrl/${vechileId}`)}
-        />
+        <div className="mt-3 p-2 ms-5">
+          <AddVechile />
+        </div>
         <form
           className="d-flex mt-3 p-2 w-40"
           role="search"
